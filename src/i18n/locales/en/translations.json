@@ -1,0 +1,36 @@
+{
+  "top_nav": {
+    "special_button": "Special",
+    "get": "Get 10%",
+    "discount_percentage": "Discount",
+    "first_order": "for first order",
+    "register_link_text": "Register Now"
+  },
+  "middle_nav": {
+    "sellOnMercado": "Sell on Mercado",
+    "orderTracking": "Order Tracking",
+    "recentlyViewed": "Recently Viewed"
+  },
+
+  "logo_alt": "MERCADO",
+  "links": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "search": {
+    "all_categories": "All Categories",
+    "tech": "Tech",
+    "clothe": "Clothe",
+    "placeholder": "Search anything..."
+  },
+  "location": {
+    "deliver_to": "Deliver to",
+    "country": "Egypt"
+  },
+  "user": {
+    "sign_in": "Sign In",
+    "account": "Account"
+  }
+}

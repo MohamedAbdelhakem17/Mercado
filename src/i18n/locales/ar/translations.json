@@ -1,0 +1,37 @@
+{
+  "top_nav": {
+    "special_button": "خاص",
+    "get": "احصل على 10%",
+    "discount_percentage": "خصم",
+    "first_order": "لأول طلب",
+    "register_link_text": "سجل الآن"
+  },
+
+  "middle_nav": {
+    "sellOnMercado": "بيع على السوق",
+    "orderTracking": "تتبع الطلب",
+    "recentlyViewed": "شوهدت مؤخرا"
+  },
+
+  "logo_alt": "ميركادو",
+  "links": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "about": "حول",
+    "contact": "اتصل بنا"
+  },
+  "search": {
+    "all_categories": "كل الفئات",
+    "tech": "تقنية",
+    "clothe": "ملابس",
+    "placeholder": "ابحث عن أي شيء..."
+  },
+  "location": {
+    "deliver_to": "التوصيل الى ",
+    "country": "مصر"
+  },
+  "user": {
+    "sign_in": "تسجيل الدخول",
+    "account": "على الحساب"
+  }
+}
