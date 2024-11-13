@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         required: [true, "Username is required"],
         minLength: [5, "Username must be at least 5 characters"],
         maxLength: [25, "Username must be less than 25 characters"],
-        match: [/^[a-zA-Z0-9]+$/, "Username should be alphanumeric only"]
+        match: [/^[a-zA-Z0-9-\s]+$/, "Username should be alphanumeric only"]
     },
 
     email: {
@@ -71,7 +71,6 @@ const userSchema = new mongoose.Schema({
 
     emailVerificationCode: String,
     emailVerificationExpires: Date,
-    lastLogin: { type: Date },
     isDeleted: { type: Boolean, default: false }
 
 }, { timestamps: true });
