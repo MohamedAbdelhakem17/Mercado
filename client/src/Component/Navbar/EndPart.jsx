@@ -38,7 +38,7 @@ const EndPart = () => {
       <div className="md:hidden lg:flex items-center gap-x-10 ">
         {/* links */}
         <ul>
-          <li className="px-2 inline-block"><Link className={`text-center py-1 ${hoverLinkStyle} ${activeLineStyle}`}>{content("links.home")}</Link></li>
+          <li className="px-2 inline-block"><Link to={"/"} className={`text-center py-1 ${hoverLinkStyle} ${activeLineStyle}`}>{content("links.home")}</Link></li>
           <li className="px-2 inline-block"><Link className={`text-center py-1 ${hoverLinkStyle}`}>{content("links.products")}</Link></li>
           <li className="px-2 inline-block"><Link className={`text-center py-1 ${hoverLinkStyle}`}>{content("links.about")}</Link></li>
           <li className="px-2 inline-block"><Link className={`text-center py-1 ${hoverLinkStyle}`}>{content("links.contact")}</Link></li>
@@ -68,7 +68,7 @@ const EndPart = () => {
         <div className="flex items-center gap-x-8">
           <div className="flex items-center gap-x-3">
             <i className="fa-regular fa-user text-main text-[20px]"></i>
-            <Link><span>{content("user.sign_in")}</span><br /><span className="font-bold p-0">{content("user.account")}</span></Link>
+            <Link to={"/login"}><span>{content("user.sign_in")}</span><br /><span className="font-bold p-0">{content("user.account")}</span></Link>
           </div>
           <i className="text-main cursor-pointer text-[20px] fa-regular fa-heart"></i>
           <i className="text-main cursor-pointer text-[20px] fa-solid fa-bag-shopping"></i>

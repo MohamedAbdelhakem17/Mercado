@@ -4,6 +4,10 @@ const express = require("express");
 const morgan = require("morgan");
 const databaseConnect = require("./config/dbConnection");
 const amountRoutes = require("./routes");
+const globalError = require("./middlewares/globalErrorMiddleware");
+const AppError = require("./util/appError");
+const { httpStatus } = require("./config/systemVariables");
+
 const app = express();
 
 app.use(compression());
@@ -21,22 +25,14 @@ amountRoutes(app);
 
 // Handel NotFound Route
 app.use("*", (req, res) => {
-    res.status(404).json({
-        status: "Error",
-        data: `This route ${req.hostname} not found. Please try another one.`
-    });
+    throw new AppError(`This route ${req.hostname} not found. Please try another one.`, 404, httpStatus.FAIL)
 });
 
 // Error-handling middleware
-app.use((error, req, res, next) => {
-    res.status(500).json({
-        status: "Error",
-        data: `Error. Please try another one. ${error.message}`
-    });
-});
+app.use(globalError);
 
 const server = app.listen(process.env.PORT, () => {
-    console.log("Server running successfully on port " + process.env.PORT);
+    console.log(`Server running successfully on port  ${process.env.PORT}`);
 });
 
 process.on("unhandledRejection", (error) => {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const SignUP = () => {
@@ -132,7 +133,7 @@ const SignUP = () => {
                         </form>
 
                         <p className="text-center mt-4 text-gray-600">
-                            Already have an account? <a href="#" className=" font-medium text-lg">Sign in</a>
+                            Already have an account? <Link to="/login" className=" font-medium text-lg">Sign in</Link>
                         </p>
 
                         <p className="text-center text-gray-500 mt-4 text-xs">

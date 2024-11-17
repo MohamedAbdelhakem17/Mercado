@@ -1,5 +1,3 @@
-// Islam Salah 
-
 import {motion} from 'framer-motion'
 import {Container,Row,Col} from 'react-bootstrap'
 import './Home.css'
@@ -102,4 +100,3 @@ const Home = () => {
 
 export default Home
 
-// Islam Salah 
