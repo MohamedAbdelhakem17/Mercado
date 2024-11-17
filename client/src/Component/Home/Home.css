@@ -12,6 +12,8 @@ main .photo , main .photo2 , main .photo3{
     bottom: 0px;
     background-size: cover;
     border-radius: 37px;
+    background-color: white;
+    border:none;
 }
 main .photo{
     background-image: url(slider3.png.png);
@@ -47,6 +49,9 @@ main .photo .screen-des p , main .photo2 .screen-des p , main .photo3 .screen-de
     color: white;
     width: 60%;
 }
+main .photo .screen-des p{
+    margin-bottom: .5rem;
+}
 main .photo3 .screen-des p{
     color: black;
 }
@@ -56,7 +61,7 @@ main button{
     font-size: 18px;
     font-weight: 600;
     padding: .3rem 1.3rem;
-    border-radius: .3rem;
+    border-radius: 16px;
     color: #F44321;
     transition: .3s;
 }
