@@ -1,0 +1,89 @@
+main{
+    height: 70vh;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+main .photo , main .photo2 , main .photo3{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-size: cover;
+    border-radius: 37px;
+}
+main .photo{
+    background-image: url(slider3.png.png);
+}
+main .photo2{
+    background-image: url(head_1.png.png);
+}
+main .photo3{
+    background-image: url(head_3.png.png);
+}
+main .photo .screen-des , main .photo2 .screen-des , main .photo3 .screen-des{
+    width: 50%;
+}
+main .photo .screen-des .title, main .photo2 .screen-des .title , main .photo3 .screen-des .title{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 55%;
+    padding-top: 17%;
+}
+main .photo2 .screen-des .title{
+    padding-top: 20%;
+    width: 51%;
+}
+main .photo2 .screen-des {
+    width: 40%;
+}
+main .photo .screen-des .title span{
+    font-weight: 400;
+}
+main .photo .screen-des p , main .photo2 .screen-des p , main .photo3 .screen-des p{
+    margin-top: 12px;
+    color: white;
+    width: 60%;
+}
+main .photo3 .screen-des p{
+    color: black;
+}
+main button{
+    margin-top: 48px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: .3rem 1.3rem;
+    border-radius: .3rem;
+    color: #F44321;
+    transition: .3s;
+}
+main button:hover{
+    background-color: #F44321;
+    color: white;
+}
+main .photo3 .screen-des .title{
+    width: 30%;
+    padding-top: 14%;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-left: 2.2rem;
+    margin-bottom: 3.5rem;
+    color: black;
+}
+main .photo3 .screen-des .title span{
+    display: block;
+}
+
+/* main end  */
+
+#Popular h1 {
+    font-size: 1.5rem; 
+    font-weight: 600;
+    margin: .5rem 0;
+}
+#Popular h1 span{
+    color: #F44321;
+}
