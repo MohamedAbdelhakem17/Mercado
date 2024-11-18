@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const SignUP = () => {
@@ -89,7 +90,7 @@ const SignUP = () => {
                                     className="absolute right-20 top-2/3 transform -translate-y-1/2 text-gray-500"
                                 >
                                     <img
-                                        src={showPassword ? "https://img.icons8.com/ios-filled/50/000000/visible.png" : "https://img.icons8.com/ios-filled/50/000000/invisible.png"}
+                                        src={showPassword ? "public/SVGRepo_iconCarrier.svg" : "public/Vector.png"}
                                         alt={showPassword ? "Hide password" : "Show password"}
                                         className="w-5 h-5"
                                     />
@@ -111,7 +112,7 @@ const SignUP = () => {
                                     className="absolute right-20 top-2/3 transform -translate-y-1/2 text-gray-500"
                                 >
                                     <img
-                                        src={showPassword ? "https://img.icons8.com/ios-filled/50/000000/visible.png" : "https://img.icons8.com/ios-filled/50/000000/invisible.png"}
+                                        src={showPassword ? "public/SVGRepo_iconCarrier.svg" : "public/Vector.png"}
                                         alt={showPassword ? "Hide password" : "Show password"}
                                         className="w-5 h-5"
                                     />
@@ -123,7 +124,7 @@ const SignUP = () => {
                             </button>
 
                             <div className="flex items-center  mt-4">
-                                <button className="bg-white border border-gray-300 rounded-lg px-4 py-2 w-11/12 flex items-center justify-center text-red-600 font-medium text-lg">
+                                <button className="bg-white border border-gray-300 rounded-lg hover:bg-gray-100 px-4 py-2 w-11/12 flex items-center justify-center text-red-600 font-medium text-lg">
                                     <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon" className="h-5 w-5 mr-2" />
                                     Sign in with Google
                                 </button>
@@ -132,7 +133,7 @@ const SignUP = () => {
                         </form>
 
                         <p className="text-center mt-4 text-gray-600">
-                            Already have an account? <a href="#" className=" font-medium text-lg">Sign in</a>
+                            Already have an account? <Link to="/login" className=" font-medium text-lg">Sign in</Link>
                         </p>
 
                         <p className="text-center text-gray-500 mt-4 text-xs">

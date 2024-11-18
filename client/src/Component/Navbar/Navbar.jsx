@@ -2,6 +2,7 @@ import TopPart from "./TopPart";
 import MiddlePart from "./MiddlePart";
 import EndPart from "./EndPart";
 
+
 const Navbar = () => {
 
 
@@ -12,6 +13,7 @@ const Navbar = () => {
                 <MiddlePart />
                 <EndPart />
             </div>
+
         </nav>
     );
 };
