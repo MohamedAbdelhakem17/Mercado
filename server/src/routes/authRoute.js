@@ -4,8 +4,8 @@ const { signup, verifyEmail, resendCode, signin } = require("../controller/authC
 const router = express.Router()
 
 router.post("/signup", signup)
+router.post("/signin", signin)
 router.post("/verifyEmail", verifyEmail)
 router.post("/resendCode", resendCode)
-router.post("/signin", signin)
 
 module.exports = router
