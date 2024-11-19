@@ -1,7 +1,10 @@
+const path = require("node:path")
+
 require("dotenv").config({ path: ".env" });
 const compression = require("compression");
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors")
 const databaseConnect = require("./config/dbConnection");
 const amountRoutes = require("./routes");
 const globalError = require("./middlewares/globalErrorMiddleware");
@@ -12,6 +15,9 @@ const app = express();
 
 app.use(compression());
 app.use(express.json());
+app.use(cors({ origin: "*" }))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, "../uploads")))
 
 // Database connection
 databaseConnect();
