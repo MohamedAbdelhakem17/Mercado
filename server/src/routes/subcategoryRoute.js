@@ -9,7 +9,7 @@ const {
     updateCategory,
 } = require("../controller/subcategoryController");
 
-const router = express.Router();
+const router = express.Router({mergeParams:true});
 
 router
     .route("/")

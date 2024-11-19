@@ -4,10 +4,14 @@ const AppError = require("../util/appError");
 
 const getAll = (Model) =>
   asyncHandler(async (req, res) => {
+    let filterObject = {}
+    if (req.body.filter) {
+      filterObject = req.body.filter
+    }
     const limit = +req.query.limit || 10;
     const page = +req.query.page || 1;
     const skip = (page - 1) * limit;
-    const data = await Model.find({}, { __v: 0 }).skip(skip).limit(limit);
+    const data = await Model.find(filterObject, { __v: 0 }).skip(skip).limit(limit);
     res.status(200).json({ status: httpStatus.SUCCESS, data });
   });
 
