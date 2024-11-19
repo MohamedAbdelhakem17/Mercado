@@ -1,5 +1,4 @@
 const express = require("express")
-const slugifyMiddleware = require("../middlewares/slugifuyMiddleware")
 
 const { signup, verifyEmail, resendCode, signin } = require("../controller/authController")
 
