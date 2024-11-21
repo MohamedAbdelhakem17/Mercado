@@ -22,7 +22,8 @@ router
     addProduct
   );
 
-router
+router.
+  route("/:id")
   .get(getOneProduct)
   .put(
     imageProductUpload,
