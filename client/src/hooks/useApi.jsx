@@ -34,7 +34,7 @@ const useApi = (baseEndpoint) => {
             setError(null);
             setResponse(null);
 
-            const apiUrl = `http://localhost:7698/api/v1${baseEndpoint}${endpoint}`;
+            const apiUrl = `http://localhost:7698/api/v1${baseEndpoint}`;
 
             try {
                 const options = {
