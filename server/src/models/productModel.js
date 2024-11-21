@@ -93,22 +93,6 @@ const productSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-// Virtual Field for Discount Percentage
-productSchema.virtual("discountPercentage").get(function () {
-    if (this.priceAfterDiscount) {
-        return ((this.price - this.priceAfterDiscount) / this.price) * 100;
-    }
-    return 0;
-});
-
-// Image URL Formatting Hook
-productSchema.pre(["init", "save"], (doc) => {
-    if (doc.imageCover) doc.imageCover = `${process.env.WEBSITES_LINK}/products/${doc.imageCover}`;
-
-    if (doc.images) doc.images = doc.images.map(image => `${process.env.WEBSITES_LINK}/products/${image}`);
-
-});
-
 // Transform Output
 const transform = (doc, ret) => {
     delete ret.id;
@@ -126,6 +110,23 @@ productSchema.set("toObject", {
     virtuals: true,
     transform
 });
+// Virtual Field for Discount Percentage
+productSchema.virtual("discountPercentage").get(function () {
+    if (this.priceAfterDiscount) {
+        return ((this.price - this.priceAfterDiscount) / this.price) * 100;
+    }
+    return 0;
+});
+
+// Image URL Formatting Hook
+productSchema.pre(["init", "save"], (doc) => {
+    if (doc.imageCover) doc.imageCover = `${process.env.WEBSITES_LINK}/products/${doc.imageCover}`;
+
+    if (doc.images) doc.images = doc.images.map(image => `${process.env.WEBSITES_LINK}/products/${image}`);
+
+});
+
+
 
 // Indexes
 productSchema.index({ title: 1, slug: 1 });
