@@ -3,18 +3,20 @@ const slugifuyMiddleware = require("../middlewares/slugifuyMiddleware")
 
 const {
     getAllCategory,
+    createObjectFilter,
     getOneCategory,
     deleteCategory,
     addNewCategory,
+    assignCategoryIdToBody,
     updateCategory,
 } = require("../controller/subcategoryController");
 
-const router = express.Router({mergeParams:true});
+const router = express.Router({ mergeParams: true });
 
 router
     .route("/")
-    .get(getAllCategory)
-    .post(slugifuyMiddleware("name"), addNewCategory);
+    .get(createObjectFilter, getAllCategory)
+    .post(assignCategoryIdToBody, slugifuyMiddleware("name"), addNewCategory);
 router
     .route("/:id")
     .get(getOneCategory)

@@ -12,6 +12,11 @@ const slugifyMiddleware = require("../middlewares/slugifuyMiddleware");
 
 const router = express.Router();
 
+// Nested Route
+const reviewRoute = require("./reviewRoute")
+
+router.use("/:productId/review", reviewRoute)
+
 router
   .route("/")
   .get(getAllProduct)

@@ -3,11 +3,9 @@ const slugifyMiddleware = require("../middlewares/slugifuyMiddleware")
 
 const {
     getAllCategory,
-    createObjectFilter,
     getOneCategory,
     deleteCategory,
     addNewCategory,
-    assignCategoryIdToBody,
     updateCategory,
     imageCategoryUpload,
     imageManipulations,
@@ -22,8 +20,8 @@ router.use("/:categoryId/subcategory", SubcategoryRoute)
 
 router
     .route("/")
-    .get(createObjectFilter, getAllCategory)
-    .post(imageCategoryUpload, imageManipulations, slugifyMiddleware("name"),assignCategoryIdToBody,addNewCategory);
+    .get(getAllCategory)
+    .post(imageCategoryUpload, imageManipulations, slugifyMiddleware("name"),addNewCategory);
 router
     .route("/:id")
     .get(getOneCategory)
