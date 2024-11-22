@@ -1,0 +1,29 @@
+#cats{
+    padding-bottom: 3rem;
+}
+#cats h1 {
+    font-size: 1.5rem; 
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+#cats h1 span{
+    color: #F44321;
+}
+#cats .Categorie{
+    border: 2px solid rgb(156, 156, 156);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 1rem;
+    border-radius: 22px;
+    margin: 1rem 0;
+    width: 95%;
+}
+#cats .Categorie img{
+    font-size: 52px;
+}
+#cats .Categorie p{
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}

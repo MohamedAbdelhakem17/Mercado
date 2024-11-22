@@ -83,12 +83,3 @@ main .photo3 .screen-des .title span{
 }
 
 /* main end  */
-
-#Popular h1 {
-    font-size: 1.5rem; 
-    font-weight: 600;
-    margin: .5rem 0;
-}
-#Popular h1 span{
-    color: #F44321;
-}

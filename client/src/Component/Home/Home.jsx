@@ -1,8 +1,12 @@
 import {motion} from 'framer-motion'
-import {Container,Row,Col} from 'react-bootstrap'
+import Footer from '../Footer/Footer'
 import './Home.css'
+import Categorie from '../Categories/Categorie'
 
 const Home = () => {
+
+    
+
     return (
         <>
             <main id="screen-anim">
@@ -72,28 +76,8 @@ const Home = () => {
                     </div>
                 </motion.div>
             </main>
-            <section id='Popular'>
-                <Container>
-                    <h1 className='text-center'> <span>Popular</span> Categories</h1>
-                    <Row>
-                        <Col lg={4} md={6} sm={12}>
-                            <div className="Categorie">
-                                <i className="fa-solid fa-shirt"></i>
-                            </div>
-                        </Col>
-                        <Col lg={4} md={6} sm={12}>
-                            <div className="Categorie">
-                                <i className="fa-solid fa-shirt"></i>
-                            </div>
-                        </Col>
-                        <Col lg={4} md={6} sm={12}>
-                            <div className="Categorie">
-                                <i className="fa-solid fa-shirt"></i>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
+            <Categorie />
+            <Footer />
         </>
     )
 }
